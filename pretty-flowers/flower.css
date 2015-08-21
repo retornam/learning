@@ -1,0 +1,27 @@
+header {
+	background-color: #1E824C;
+}
+body {
+  font-family: 'Poiret One', cursive;
+  background-color: #F2784B;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+.column {
+  height: 355;
+}
+img {
+  float: left;
+  width: 350px;
+  height: 350px;
+  display: block;
+  margin: auto;
+}
+ul {
+	display: inline;
+}
+li {
+	padding-left: 380px;
+	margin-bottom: 20px;
+}
