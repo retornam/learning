@@ -1,14 +1,15 @@
 /* Properties */
 // Passed-in values
-function Flower(color, petals, smellsPretty, origin, name, image) {
+function Flower(name, color, petals, leafCount, origin, isEdible, smellsPretty, image, comments) {
   
   this.name = name;
   this.color = color;
   this.petals = petals;
-  this.leafCount = 10;
+  this.leafCount = leafCount;
   this.origin = origin;
-  this.isEdible = false;
+  this.isEdible = isEdible;
   this.smellsPretty= smellsPretty;
+  this.image = image;
   this.comments = comments;
 
   //this.wiltFactor = 100; //0 is dead, 100 is fresh
@@ -36,8 +37,16 @@ function Flower(color, petals, smellsPretty, origin, name, image) {
   };
   // append html string to website 
   this.render = function() {
-    $("#image").append('<img src="' + this.image + '">');
     $('li#name').append(this.name);
+    $('li#name').append(this.color);
+    $('li#name').append(this.petals);
+    $('li#name').append(this.leafCount);
+    $('li#name').append(this.origin);
+    $('li#name').append(this.isEdible);
+    $('li#name').append(this.smellsPretty);
+    $("#image").append('<img src="' + this.image + '">');
+    $('li#name').append(this.comments);
+
   };
   // displays message to console
   this.giveFlower= function(){
