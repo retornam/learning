@@ -1,12 +1,13 @@
-header {
-	background-color: #1E824C;
-}
 body {
   font-family: 'Poiret One', cursive;
-  background-color: #F2784B;
   color: white;
   font-weight: bold;
   font-size: 20px;
+  background: url(
+    "http://free.bridal-shower-themes.com/img/b/l/black-and-white-background-with-flowers_2.jpg");
+  background-size: cover;
+  background-position: center;
+
 }
 .column {
   height: 355;
@@ -17,11 +18,13 @@ img {
   height: 350px;
   display: block;
   margin: auto;
+  padding-left: 40px;
+  padding-top: 18px;
 }
 ul {
 	display: inline;
 }
 li {
-	padding-left: 380px;
+	padding-left: 430px;
 	margin-bottom: 20px;
 }
