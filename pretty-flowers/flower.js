@@ -57,7 +57,6 @@ function Flower(name, color, petals, leafCount, origin, isEdible, smellsPretty, 
 var tableSixFlower = new Flower("Western Dahlia", "Pink", 64, 10, "Mexico", false, true, "http://i.imgur.com/vPbvW1Q.jpg?1", "This is my favorite flower! -Anonymous Pretty Flower user");
 var tableSevenFlower = new Flower("Rose", "Rainbow", 13, 3, "The Castro", false, true, "http://i.imgur.com/2Z6xET0.jpg?1", "Showing my pride with an awesome flower! -Anonymous Pretty Flower user");
 
-
 $(function(){
-  tableSevenFlower.render()
+  tableSixFlower.render()
 });
