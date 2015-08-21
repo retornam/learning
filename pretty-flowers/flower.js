@@ -37,15 +37,15 @@ function Flower(name, color, petals, leafCount, origin, isEdible, smellsPretty, 
   };
   // append html string to website 
   this.render = function() {
-    $('li#name').append(this.name);
-    $('li#name').append(this.color);
-    $('li#name').append(this.petals);
-    $('li#name').append(this.leafCount);
-    $('li#name').append(this.origin);
-    $('li#name').append(this.isEdible);
-    $('li#name').append(this.smellsPretty);
+    $('li#name').append(" " + this.name);
+    $('li#color').append(" " + this.color);
+    $('li#petals').append(" " + this.petals);
+    $('li#leaves').append(" " + this.leafCount);
+    $('li#origin').append(" " + " " + this.origin);
+    $('li#eat').append(" " + this.isEdible);
+    $('li#smell').append(" " + " " + this.smellsPretty);
     $("#image").append('<img src="' + this.image + '">');
-    $('li#name').append(this.comments);
+    $('li#comment').append(" " + this.comments);
 
   };
   // displays message to console
@@ -53,10 +53,11 @@ function Flower(name, color, petals, leafCount, origin, isEdible, smellsPretty, 
     console.log("Here's a flower")
   };
 }
-var flowerTable6 = new Flower("pink", 64, true, "Mexico", "Western Dahlia", "http://i.imgur.com/vPbvW1Q.jpg?1");
-var flowerTable7 = new Flower("blue", 60, false, "SF", "Eastern Dahlia", "http://i.imgur.com/2Z6xET0.jpg?1");
+
+var flowerTable6 = new Flower("Western Dahlia", "Pink", 64, 10, "Mexico", false, true, "http://i.imgur.com/vPbvW1Q.jpg?1", "This is my favorite flower! -Anonymous Pretty Flower user");
+var flowerTable7 = new Flower("Rose", "Rainbow", 42, 3, "The Castro", false, true, "http://i.imgur.com/2Z6xET0.jpg?1", "Showing my pride with an awesome flower! -Anonymous Pretty Flower user");
 
 
 $(function(){
-
+  flowerTable7.render()
 });
