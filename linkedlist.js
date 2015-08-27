@@ -161,27 +161,21 @@ List.prototype = {
         you remove the node!
     */
     delete: function(data) {
-        // Enter code here!
+        var node = this.start;
+	var node.data = data;
+	while (node !== null) {
+	    
     }
 }
 
-
 /* LinkedList initialization */
-var LinkedList = new List();
+    var LinkedList = new List();
+/* We're creating our "base" linkedList */
 var i = 2;
 while(i <= 20) {
     LinkedList.addAtEnd(i);
     i+=2;
 }
-
-var LinkedList = new List();
-var i = 2;
-while (i <= 20) {
-    LinkedList.addAtEnd(i);
-    i+=2;
-}
-
-/* LinkedList initialization */
 /* print */
 console.log("Before:");
 LinkedList.print();
