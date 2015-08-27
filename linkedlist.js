@@ -49,36 +49,40 @@ List.prototype = {
         Method: insertAtHead
         Insert a new Node at the head of the list.
     */
-    insertAtHead: function(data) {
-        var listString = 'Head -> ';
-        var current = this.start;
-        while(current === null) {
-            current = this.makeNode();
-            current.data;
-            // print out the 'current' Node's data
-
-            listString += current.data() + ' -> ';
-            // assign our 'current' Node's next to be 'current' (increment!)
-            current = current.next;
-        }
-        console.log(current);
+    
+       insertAtHead: function(data) {
+        var temp = this.makeNode();
+        temp.data = data;
+        temp.next = this.start;
+        this.start = temp;
     },
 
-    /*
-        Method: length
-        Traverse the list. Return the amount of Nodes in the list.
+    /*                                                                                                                 
+        Method: length                                                                                                 
+        Traverse the list. Return the amount of Nodes in the list.                                                     
     */
     length: function() {
-        // Enter code here!
+        var current = this.start;
+        for (i = 0; current !== null; current = current.next, i++){
+        }
+        return i;
     },
+
 
     /*
         Method: exists
         Traverse the list. If a Node with the data passed in exists, then return
         true. If not, return false
     */
-    exists: function(data) {
-        // Enter code here!
+     exists: function(data) {
+        var node = this.start;
+        while (node !== null) {
+            if (data === node.data) {
+                return true;
+            }
+            node = node.next;
+        }
+        return false;
     },
 
     /*
@@ -86,8 +90,12 @@ List.prototype = {
         Traverse the list. For each Node, call the function f on that Node.
         Example: f(current);
     */
-    each: function(f) {
-        // Enter code here!
+    each: function (accessor) {
+        var node = this.start;
+        while (node !== null) {
+            accessor(node);
+            node = node.next;
+        }
     },
 
     /*
@@ -95,8 +103,16 @@ List.prototype = {
         Traverse the list. If a Node with the data passed is found, return an
          index (integer) of that Node's location.
     */
-    indexOf: function(data) {
-        // Enter code here!
+        indexOf: function(data) {
+        var node = this.start;
+        var counter = 0;
+        while (node !== null) {
+            if (data === node.data) {
+                return counter;
+            }
+            node = node.next;
+            counter++;
+        }
     },
 
     /*
@@ -136,5 +152,25 @@ while(i <= 20) {
     i+=2;
 }
 
-//LinkedList.print();
-LinkedList.insertAtHead();
+var LinkedList = new List();
+var i = 2;
+while(i <= 20) {
+    LinkedList.addAtEnd(i);
+    i+=2;
+}
+
+/* LinkedList initialization */
+LinkedList.print();
+
+LinkedList.insertAtHead("I love coffee");
+
+function accessor(node){
+    console.log(node.data + " has been accessed.");
+}
+
+LinkedList.each(accessor);
+
+console.log("After");
+LinkedList.print();
+
+console.log(LinkedList.indexOf(8));
