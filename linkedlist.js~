@@ -129,29 +129,7 @@ List.prototype = {
          after it.  You must preserve the list structure!
     */
     insertAt: function(i, data){
-	var previousNode;
-	var newNode = this.makeNode();
-        newNode.data = data;
-	var current = this.start;
-	var index = 0;
-	if(i > this.length() + 1){
-	    return "index out of range";
-	}
-	if(i === 0){
-	    this.insertAtHead(data);
-	}
-	while(current !== null){
-	    if(index === i - 1){
-		newNode.next = current.next;
-		current.next = newNode;
-		if(i === this.length() - 1){
-		    this.end = newNode;
-		}
-		return "inserted";
-	    }
-	    index++;
-	    current = current.next;
-	}
+        // Enter code here!
     },
 
     /*
@@ -176,43 +154,23 @@ while(i <= 20) {
 
 var LinkedList = new List();
 var i = 2;
-while (i <= 20) {
+while(i <= 20) {
     LinkedList.addAtEnd(i);
     i+=2;
 }
 
 /* LinkedList initialization */
-/* print */
-console.log("Before:");
 LinkedList.print();
-/* Run your functions here */
-// Insert functions here to test.
-/* Print again to see your results */
 
-// check insertAtHead method
-LinkedList.insertAtHead("Breakfast Burrito");
+LinkedList.insertAtHead("I love coffee");
 
-// check length method
-var length = LinkedList.length();
-console.log("Length: " + length);
+function accessor(node){
+    console.log(node.data + " has been accessed.");
+}
 
-// check exists method
-var foundData = LinkedList.exists(8);
-console.log("Does 8 exist in our list: " + foundData);
-
-// check each method
-function accessor(node) {
-    console.log(node.data + " has been accessed.")
-	}
 LinkedList.each(accessor);
-
-
-
-// check indexOf methodd
-var indexOfSix = LinkedList.indexOf(6);
-console.log("Index of six: " + indexOfSix);
-
-LinkedList.insertAt(3, 'Bertha');
 
 console.log("After");
 LinkedList.print();
+
+console.log(LinkedList.indexOf(8));
