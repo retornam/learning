@@ -11,5 +11,14 @@ function findClassmate (classmate) {
     if (mid === classmate){
 	return mid;
     } else if (mid > classmate) {
-	
+	min =
+	    //cut off last half of array
+	    //reassign mid, min, max
+      return findClassmate();
+    } else if (mid < classmate) {
+	min = 
+	    //cut off first half of array           
+	    //reassign mid, min, max 
+      return findClassmate();
+    }
 }
