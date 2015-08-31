@@ -7,18 +7,38 @@ function findClassmate (classmate) {
     mid = classmates.length / 2;
     max = classmates.length - 1;
     min = classmates[0];
+    currentElement = mid[0];
 
-    if (mid === classmate){
+    if (currentElement === classmate){
 	return mid;
     } else if (mid > classmate) {
-	min =
+	min = mid + 1;
 	    //cut off last half of array
 	    //reassign mid, min, max
       return findClassmate();
     } else if (mid < classmate) {
-	min = 
+        max = mid - 1;
 	    //cut off first half of array           
 	    //reassign mid, min, max 
       return findClassmate();
     }
 }
+
+console.log(findClassmate('Tika'));
+
+/*
+function binarySearchR(searchArray, searchElement, min, max) {
+  if (max < min) { return null; }
+
+  var mid = Math.floor((min + max) / 2);
+
+  if (searchArray[mid] > searchElement) {
+    return binarySearchR(searchArray, searchElement, min, mid - 1);
+  }
+
+  if (searchArray[mid] < searchElement) {
+    return binarySearchR(searchArray, searchElement, mid + 1, max);
+  }
+  return mid;
+}
+*/
