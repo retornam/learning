@@ -11,7 +11,6 @@ app.get("/", function (req, res) {
 	cookieCount++;
     });
 
-var cookieCount = 0;
 app.get("/cookiemonster", function (req, res) {
 	res.cookie("wdi", 21);
 	res.send("Come to my 127.0.0.1 and I’ll give you sudo access");
