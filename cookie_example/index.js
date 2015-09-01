@@ -18,10 +18,13 @@ app.get("/cookiemonster", function (req, res) {
     });
 
 app.get("/clearcookie", function (req, res) {
-		res.cookie("wdi", 21);
-		res.clearCookie("wdi", 21);
+	var cal = req.cookies.wdi;
+	console.log(val, typeof(val));
 
-        res.send("Is your name Wi-fi? Because I'm really feeling a connection.");
+	res.cookie("wdi", 21);
+	res.clearCookie("wdi");
+       
+    res.send("Is your name Wi-fi? Because I'm really feeling a connection.");
     });
 
 app.listen(3000, function () {
