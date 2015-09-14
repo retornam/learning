@@ -1,0 +1,8 @@
+def p_times (statement, number)
+	while number > 0
+		puts statement
+		number -= 1
+	end
+end
+
+p_times('Hello', 3)
