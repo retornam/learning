@@ -3,12 +3,8 @@ class Car
 	def initialize (color)
 		@color = color
 	end
-	def color? (color)
-		if color == @color
-			true
-		else
-			false
-		end
+	def color?(color)
+		@color === color
 	end
 end
 alpha = Car.new("orange")
