@@ -24,3 +24,20 @@ popsugar = NailPolish.new
 popsugar.color = "pink"
 
 puts popsugar.color
+
+class Animal
+	attr_reader :type
+	def initialize (kind)
+		@type = kind
+		@state = "awake"
+	end
+	def eat (food)
+		p "chomp chomp, #{@type} is eating"
+	end
+	def sleep
+		@state = "asleep"
+	end
+	def wake
+		@state = "awake"
+	end
+end
