@@ -1,6 +1,6 @@
 # Implement an algorithm to determine if a string has all unique characters
 
-def is_str_unique (str)
+def is_str_unique? (str)
   characters = {}
 
   str.each_char do |c|
@@ -10,4 +10,4 @@ def is_str_unique (str)
 end
 
 # this will return false
-is_str_unique("Keala")
+is_str_unique?("Keala")
