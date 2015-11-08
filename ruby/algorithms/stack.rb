@@ -1,18 +1,22 @@
 class Stack
   def initialize
-    @stack = []
+    @store= []
   end
 
-  def push
-    @stack.push
+  def push(x)
+    @store.push(x)
   end
 
   def pop
-    @stack.pop
+    @store.pop
   end
 
   def peek
-    @stack.last
+    @store.last
+  end
+
+  def empty
+    @store.empty?
   end
 
 end
