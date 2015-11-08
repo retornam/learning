@@ -1,1 +1,1 @@
-# Random exercises and such
+# Exercises and such
