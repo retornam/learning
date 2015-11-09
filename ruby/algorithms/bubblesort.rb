@@ -1,19 +1,19 @@
-def bubble_sort(array)
+def bubble_sort(arr)
   swapped = true
-  length = array.length-1
+  length = arr.length-1
   while swapped do
     i = 0
     swapped = false
-    while i <length
-      n = i +1
-      if array[i] > array[n]
-        temp = array[i]
-        array[i]= array[n]
-        array[n] = temp
+    while i < length
+      n = i + 1
+      if arr[i] > arr[n]
+        temp = arr[i]
+        arr[i]= arr[n]
+        arr[n] = temp
         swapped = true
       end
       i+=1
     end
   end
-  return array
+  return arr
 end
