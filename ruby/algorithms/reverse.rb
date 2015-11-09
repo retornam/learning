@@ -5,7 +5,7 @@ def reverse(str)
     word = word + str[i-1]
     i -= 1
   end
-  puts word
+  return word
 end
 
 reverse("hello")
