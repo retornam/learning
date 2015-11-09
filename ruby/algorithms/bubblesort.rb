@@ -17,3 +17,5 @@ def bubble_sort(arr)
   end
   return arr
 end
+
+bubble_sort([4, 1, 2, 6, 8, 3])
