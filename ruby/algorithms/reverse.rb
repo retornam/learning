@@ -3,9 +3,9 @@ def reverse(str)
   i = str.length
   while i > 0 
     word = word + str[i-1]
-    i = i - 1
+    i -= 1
   end
-  return word
+  puts word
 end
 
 reverse("hello")
