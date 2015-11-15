@@ -5,3 +5,11 @@ In a singly linked list each node in the list stores the contents of a node and 
 ## Doubly Linked List
 
 This consists of a set of sequentially linked records called nodes. Each node contains two fields, called links, that are references to the previous and to the next node in a sequence of nodes.
+
+## Stack
+
+Last in first out
+
+## Queue
+
+First in first out
