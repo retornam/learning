@@ -13,3 +13,9 @@ Last in first out
 ## Queue
 
 First in first out
+
+## Bubble Sort
+
+For each element in the list, look at the element and the one to the right. If the left > right, swap them. Keep swapping until the end of the array. Then move to the next element in the array and repeat this.
+
+
