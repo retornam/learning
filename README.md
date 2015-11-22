@@ -1,1 +1,1 @@
-# Exercises and such in ruby and javascript. Algorithms included.
+# Exercises and such in ruby, javascript, and python. Algorithms included.
