@@ -15,3 +15,10 @@ def hello_world():
   print "Hello World!"
 
 hello_world()
+
+x = 14
+y = 15
+
+if x < y: print x
+elif y < x: print y
+else: print "that is the same number!"
