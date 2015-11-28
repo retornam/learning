@@ -22,3 +22,9 @@ y = 15
 if x < y: print x
 elif y < x: print y
 else: print "that is the same number!"
+
+x = 16
+ans = 0
+while ans * ans <= x:
+  ans = ans + 1
+print ans
