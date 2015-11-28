@@ -22,3 +22,16 @@ def square_root(num):
   while ans * ans < x:
     ans = ans + 1
   return ans
+
+def divisor(num):
+  for i in range(1, num):
+    if num%i == 0:
+      return 'divisor ', i
+
+# tuple is an ordered sequence of elements
+test = (1, 2, 3, 4) #immutable
+print test[1:3] #from 1 up to index 3
+
+test_2 = [3, 5, 4, 2]
+sorted_array = test_2.sort()
+print sorted_array
