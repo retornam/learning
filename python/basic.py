@@ -1,30 +1,24 @@
-my_name = "Keala"
+def return_name (str):
+  # length method
+  return len(my_name)
+  # to lowercase method
+  return my_name.lower()
+  # capitalize method
+  return my_name.upper()
 
-# length method
-return len(my_name)
-# to lowercase method
-return my_name.lower()
-# capitalize method
-return my_name.upper()
-
-i_love_pi = 3.14
-
-return str(i_love_pi)
+def pi_to_string():
+  i_love_pi = 3.14
+  return str(i_love_pi)
 
 def hello_world():
   return "Hello World!"
 
-hello_world()
+def return_smallest(x, y):
+  if x < y: return x
+  elif y < x: return y
+  else: return "that is the same number!"
 
-x = 14
-y = 15
-
-if x < y: return x
-elif y < x: return y
-else: return "that is the same number!"
-
-x = 16
-ans = 0
-while ans * ans < x:
-  ans = ans + 1
-print ans
+def square_root(num):
+  while ans * ans < x:
+    ans = ans + 1
+  return ans
