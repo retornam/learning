@@ -10,16 +10,16 @@ def binary_search (array, key)
   mid = array[-1]/2
 
   if max < min 
-    puts -1
+    return -1
   else
     if mid == key
-      puts mid
+      return mid
     elsif key == min
-      puts min
+      return min
     elsif key == max
-      puts max
+      return max
     elsif key > mid
-      puts mid
+      return mid
       min = array[mid + 1]
     else
       max = array[mid - 1]
