@@ -1,1 +1,1 @@
-# Cool things in ruby, javascript, css and python. Algorithms included.
+# Cool things in various languages. Algorithms included.
