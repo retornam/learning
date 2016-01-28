@@ -32,4 +32,4 @@ stooge["first-name"] // "Jerome"
 flight.departure.IATA // "SYD"
 
 var middle = stooge["middle-name"] || "(none)";
-
+// objects are passed around by reference, that are never copied
