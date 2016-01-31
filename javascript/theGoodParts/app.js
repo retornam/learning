@@ -58,10 +58,26 @@ Function.method('curry', function () {
 });
 
 // memoization
+/*
 var fib = function (n) {
   return n < 2 ? n : fib(n - 1) + fib(n - 2);
 };
 
-for (var i = 0; i <= 100; i += 1) {
+for (var i = 0; i <= 10; i += 1) {
   document.writeln('// ' + i + ': ' + fib(i));
 }
+*/
+var fib = (function () {
+  var memo = [0, 1];
+  var fib = function (n) {
+    var result = memo[n];
+    if (typeof result !== 'number') {
+      result = fib(n - 1) + fib(n - 2);
+      memo[n] = result;
+    }
+    return result;
+  };
+  return fib;
+}());
+
+document.writeln(fib(1476));
