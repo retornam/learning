@@ -96,7 +96,7 @@ var myMammal = {
 var myCat = Object.create(myMammal);
 myCat.name = 'Henrietta';
 myCat.saying = 'meow';
-nyCat.purr = function (n) {
+myCat.purr = function (n) {
   var i, s = '';
   for (i = 0; i < n; i++) {
     if (s) {
@@ -109,3 +109,15 @@ nyCat.purr = function (n) {
 myCat.get_name = function () {
   return this,says() + ' ' + this.name + ' ' + this.says();
 };
+
+// regex is fun
+var parse_url = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
+var url = "http://www.ora.com:80/goodparts?q#fragment";
+var result = parse_url.exec(url);
+var names = ['url', 'scheme', 'slash', 'host', 'port', 'path', 'query', 'hash'];
+var blanks = '     ';
+var i;
+
+for (i = 0; i < names.length; i++) {
+  document.writeln('<br>' + names[i] + ': ' + blanks.substring(names[i].length), result[i]);
+}
