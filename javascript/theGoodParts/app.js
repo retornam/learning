@@ -66,3 +66,11 @@ getElement('myBoxDiv')
       .slide(400, 40, 200, 200);
     })
   tip('This box is resizeable');
+
+// curry
+Function.method('curry', function () {
+  var args = arguments, that = this;
+  returns function () {
+    return that.apply(null, args.concat(arguments));
+  }
+});
