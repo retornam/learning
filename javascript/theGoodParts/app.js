@@ -123,6 +123,12 @@ myCat.get_name = function () {
    \/ indicates that a / will be matched
    {0,3} 0,1,2 or 3 times
    ([0-9.\-A-Za-z]+) made up of one or more digits, letters, or . or - (which was escaped by \- to prevent confusion with a range hyphen)
+   (?::(\d+))? optionally matches port number, which is a seq of digits preceded by a :
+   \d reps a digit char-one or more digits
+   [^?#]* class includes all chars except ? #
+   * indicates that the char class is matched zero or more times
+   #(.*) the . will march any char except a line-ending char
+   $ end of the string
 */
 var parse_url = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
 var url = "http://www.ora.com:80/goodparts?q#fragment";
