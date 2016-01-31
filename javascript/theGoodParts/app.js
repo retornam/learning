@@ -46,33 +46,22 @@ var hanoi = function hanoi(disc, src, aux, dst) {
 hanoi(3, 'Src', 'Aux', 'Dst');
 
 // cascade
-getElement('myBoxDiv')
-  .move(350, 150)
-  .width(100)
-  .height(100)
-  .color('red')
-  .border('10px outset')
-  .padding('4px')
-  .appendText("Please stand by")
-  .on('mousedown', function (m) {
-    this.startDrag(m, this.getNinth(m));
-  })
-  .on('mousemove', 'drag')
-  .on('mouseup', 'stopDrag')
-  .later(2000, function () {
-    this
-      .color('yellow')
-      .setHTML("What hath God wraught?")
-      .slide(400, 40, 200, 200);
-    })
-  tip('This box is resizeable');
 
 // curry
 Function.method('curry', function () {
   var slice = Array.prototype.slice,
   args = slice.apply(arguments),
   that = this;
-  returns function () {
+  return function () {
     return that.apply(null, args.concat(slice.applu(arguments)));
   }
 });
+
+// memoization
+var fib = function (n) {
+  return n < 2 ? n : fib(n - 1) + fib(n - 2);
+};
+
+for (var i = 0; i <= 100; i += 1) {
+  document.writeln('// ' + i + ': ' + fib(i));
+}
