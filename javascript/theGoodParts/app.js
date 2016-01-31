@@ -111,6 +111,19 @@ myCat.get_name = function () {
 };
 
 // regex is fun
+
+/*
+   ^ marks the beginning of a string
+   [] indicates a character class
+   A-Za-z is the char class contains 26 upper and 26 lowercase letters
+   + indicates that the char class will be matched one or more times
+   the group is followed by : which will be matched literally
+   () indicates a capturing group
+   (?:) indicates a noncapturing group
+   \/ indicates that a / will be matched
+   {0,3} 0,1,2 or 3 times
+   ([0-9.\-A-Za-z]+) made up of one or more digits, letters, or . or - (which was escaped by \- to prevent confusion with a range hyphen)
+*/
 var parse_url = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
 var url = "http://www.ora.com:80/goodparts?q#fragment";
 var result = parse_url.exec(url);
@@ -119,5 +132,5 @@ var blanks = '     ';
 var i;
 
 for (i = 0; i < names.length; i++) {
-  document.writeln('<br>' + names[i] + ': ' + blanks.substring(names[i].length), result[i]);
+   document.writeln('<br>' + names[i] + ': ' + blanks.substring(names[i].length), result[i]);
 }
