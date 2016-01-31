@@ -67,7 +67,7 @@ for (var i = 0; i <= 10; i += 1) {
   document.writeln('// ' + i + ': ' + fib(i));
 }
 */
-var fib = (function () {
+var fibonacci = (function () {
   var memo = [0, 1];
   var fib = function (n) {
     var result = memo[n];
@@ -80,4 +80,4 @@ var fib = (function () {
   return fib;
 }());
 
-document.writeln(fib(1476));
+document.writeln(fibonacci(1476));
