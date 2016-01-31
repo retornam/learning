@@ -69,8 +69,10 @@ getElement('myBoxDiv')
 
 // curry
 Function.method('curry', function () {
-  var args = arguments, that = this;
+  var slice = Array.prototype.slice,
+  args = slice.apply(arguments),
+  that = this;
   returns function () {
-    return that.apply(null, args.concat(arguments));
+    return that.apply(null, args.concat(slice.applu(arguments)));
   }
 });
