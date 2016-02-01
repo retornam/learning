@@ -129,6 +129,8 @@ myCat.get_name = function () {
    * indicates that the char class is matched zero or more times
    #(.*) the . will march any char except a line-ending char
    $ end of the string
+   /^ $/ anchors the expression
+   /^ $/i i ignores case when matching letters
 */
 var parse_url = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
 var url = "http://www.ora.com:80/goodparts?q#fragment";
