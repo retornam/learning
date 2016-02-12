@@ -142,3 +142,16 @@ var i;
 for (i = 0; i < names.length; i++) {
    document.writeln('<br>' + names[i] + ': ' + blanks.substring(names[i].length), result[i]);
 }
+
+(function(){
+  function Keala(){
+    return {
+      init: function () {
+              console.log("keala says hi");
+            }
+    }
+  }
+  window.Keala = Keala;
+})()
+
+Keala().init();
