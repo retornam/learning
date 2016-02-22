@@ -24,7 +24,8 @@ def traverseTree(root):
         nextlevel.append(node.leftChild)
       if node.rightChild:
         nextlevel.append(node.rightChild)
-    sys.stdout.write("(floor ")
+    # print kept adding extra spaces to my floor number strings so I used sys as a workaround
+    sys.stdout.write(" (floor ")
     counter = str(counter)
     sys.stdout.write(counter)
     sys.stdout.write(")\n")
