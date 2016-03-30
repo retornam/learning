@@ -2,7 +2,7 @@
 // Anything you type or change here will be seen by the other person in real time.
 // function that finds the maximum 2 values of an array
 
-var arr = [-9, -8, 32, -10];
+var arr = [-9, -11, 32, -10];
 
 function twoHighestValues (array) {
   var highest = array[0];
