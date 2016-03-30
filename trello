@@ -65,4 +65,4 @@ date: integer
 time: integer
 isCompleted: boolean
 
-SELECT * FROM card isCompleted false
+SELECT * FROM card WHERE isCompleted = false
