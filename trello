@@ -32,15 +32,15 @@ ___
 
 // CSS
 .col-md-4 {
-width: 200px;
-display: inline-block;
+  width: 200px;
+  display: inline-block;
 }
 
 .card {
   border-color: black;
   background-color: white;
-width: 150px;
-height: 100px;
+  width: 150px;
+  height: 100px;
 }
 
 .center {
@@ -50,13 +50,13 @@ height: 100px;
 //JS
 
 $(function() {
-    var $cardContents = $(".card p");
-    $(".card").onClick(function () {
-      console.log($cardContents);
-      }
-      }
+  var $cardContents = $(".card p");
+  $(".card").onClick(function () {
+    console.log($cardContents);
+  }
+}
 
-      // SQL
+// SQL
 card:
 title: string 
 contents: string
@@ -66,5 +66,3 @@ time: integer
 isCompleted: boolean
 
 SELECT * FROM card isCompleted false
-
-
