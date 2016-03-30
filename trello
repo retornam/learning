@@ -1,0 +1,70 @@
+|   |     | ---  |
+|   |     | | |  |
+___
+
+<html>
+  <head>
+  <head/>
+<body>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="center">
+        <div class="card">
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+<div class="center">
+<div class="card">
+<p></p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="center">
+<div class="card">
+<p></p>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+// CSS
+.col-md-4 {
+width: 200px;
+display: inline-block;
+}
+
+.card {
+  border-color: black;
+  background-color: white;
+width: 150px;
+height: 100px;
+}
+
+.center {
+  text-align: center;
+}
+
+//JS
+
+$(function() {
+    var $cardContents = $(".card p");
+    $(".card").onClick(function () {
+      console.log($cardContents);
+      }
+      }
+
+      // SQL
+card:
+title: string 
+contents: string
+whoAssigned: string
+date: integer
+time: integer
+isCompleted: boolean
+
+SELECT * FROM card isCompleted false
+
+
