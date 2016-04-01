@@ -1,0 +1,49 @@
+body {
+  background-color: #F6F6F6;
+  font-family: 'Roboto Slab';
+  color: #231F20;
+}
+
+#navbar {
+  box-shadow: 0 1px 3px grey;
+  background-color: red;
+  color: white;
+}
+#navbar h1 {
+  margin: 10px 0;
+}
+
+#content {
+  margin-left: 17vw;
+  margin-right: 17vw;
+}
+
+.title {
+   margin-top: 5vh;
+ }
+
+.author {
+  text-transform: uppercase;
+}
+
+p.author a:hover {
+  text-decoration: none;
+  color: red; 
+}
+
+.tags {
+  text-transform: uppercase;
+  margin-bottom: 3vh;
+}
+p.tags a:hover {
+  text-decoration: none;
+  color: red; 
+}
+
+p {
+  width: 40vw;
+}
+
+img {
+  width: 60vw;
+}
