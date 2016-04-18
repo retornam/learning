@@ -11,7 +11,7 @@ func main() {
     fmt.Println(a, b)
 }
 
-// for loop
+// loops
 /*
 sum := 0
 for i := 0; i < 10; i++ {
@@ -27,4 +27,6 @@ for ; sum < 1000; {
 fmt.Println(sum)
 */
 
-
+  defer fmt.Println("cool")
+    
+  fmt.Println("this is")
