@@ -73,3 +73,9 @@ fmt.Println(a)
 
 primes := [6]int{2, 3, 5, 7, 11, 13}
 fmt.Println(primes)
+
+// these are equivalent
+a[0:10]
+a[:10]
+a[0:]
+a[:]
