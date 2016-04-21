@@ -5,19 +5,38 @@
 package main
 
 import (
-  "fmt"
+    "fmt"
+    "math"
 )
 
-func prime() int {
-  var n int = 600851475143
-  for d := 2; n > d; d++ {
-    if n % d == 0 {
-      fmt.Println(d)
+func isPrime(a int64) bool {
+  if a <= 1 {
+    return false
+  }
+
+  for b := sqrt(a); b >= 1; b-- {
+    if b == 1 {
+      return true
+    }
+    if a % b == 0 {
+      return false
     }
   }
-  return n
+
+  return true
+}
+
+func sqrt(a int64) int64 {
+  return int64(math.Sqrt(float64(a)))
 }
 
 func main() {
-  fmt.Println(prime())
+  var a int64 = 600851475143
+
+    for b := sqrt(a); b >= 1; b-- {
+      if a % b == 0 && isPrime(b) {
+        fmt.Println(b)
+          break
+      }
+    }
 }
