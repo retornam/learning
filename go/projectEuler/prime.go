@@ -11,15 +11,10 @@ import(
 func prime() int {
   var p int = 1
   var s int = 0
-  for i := 0; i < 10000000000000; i++ {
-    if isPrime(p) == true {
-      s += 1
-      if s == 10001 {
-        fmt.Println(s)
-        return p
-      } else if s != 10001 {
-        p++    
-      }
+  for s < 10001 {
+    p++
+    if isPrime(p) {
+      s++
     }
   }
   return p
