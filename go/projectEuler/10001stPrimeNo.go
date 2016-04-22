@@ -34,6 +34,7 @@ func isPrime(n int) bool {
   }
   return true
 }
+
 func main() {
   fmt.Println(prime())
 }
