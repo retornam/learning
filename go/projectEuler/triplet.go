@@ -13,16 +13,11 @@ import (
 )
 
 func abc() (p int) {
-  var a, b, c int = 0, 0, 1000
-  for i := 0; i < 1000; i++ {
-    a = i * i 
-    for j := 0; i < 1000; j++ {
-      b = j * j
-      for k := 0; k < 1000; k++ {
-        c = k * k;
-        if (a * a) + (b * b) + (c * c) == 1000 {
-
-          fmt.Println(a, b, c)
+  var s int = 1000
+  for a := 1; a < 450; a++ {
+    for b := 1; b < 450; b++ {
+      for c := 1; c < 450; c++ {
+        if a * a + b * b == c * c && a + b + c == s {
           p = a * b * c
           return p
         } 
