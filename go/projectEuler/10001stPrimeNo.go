@@ -9,6 +9,8 @@ import(
 )
 
 func prime() int {
+  // p is for prime number
+  // s is for sum, to keep track of how many prime numbers there has been
   var p int = 1
   var s int = 0
   for s < 10001 {
@@ -21,6 +23,7 @@ func prime() int {
 }
 
 func isPrime(n int) bool {
+  // d is for divisible
   var d int = 2
   for n > d {
     if n % d == 0 {

@@ -12,6 +12,7 @@ import (
 )
 
 func fib() (s int) {
+  // s is the sum of the even-valued terms
   s = 0
   for first, second := 0, 1; first < 4000000; first, second = second, first + second {
     if math.Mod(float64(first), 2) == 0 {

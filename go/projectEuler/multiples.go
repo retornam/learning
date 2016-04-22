@@ -11,6 +11,7 @@ import (
 func multiples() (s int) {
   for i := 0; i < 1000; i++ {
     if i % 3 == 0 || i % 5 == 0 {
+      // s is the sum of the multiples
       s += i
     }
   }

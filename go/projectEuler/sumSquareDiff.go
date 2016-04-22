@@ -15,6 +15,7 @@ import (
 )
 
 func sumSqu() int {
+  // s is for sum
   var s int = 0
   for i:= 0; i <= 100; i++ {
     s += i * i
@@ -23,6 +24,7 @@ func sumSqu() int {
 }
 
 func squSum() int {
+  // s == sum
   var s int = 0
   for i := 0; i <= 100; i++ {
     s += i

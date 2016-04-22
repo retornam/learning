@@ -13,6 +13,7 @@ import (
 
 func smallest() (n int) {
   for n = 1; n < 100000000000000; n++ {
+  // d stands for divisible
     var d bool = true
     for i := 20; i > 0; i-- {
       if n % i != 0 {

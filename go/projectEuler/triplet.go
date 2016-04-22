@@ -13,6 +13,8 @@ import (
 )
 
 func abc() (p int) {
+  // s stands for sum
+  // p for product
   var s int = 1000
   for a := 1; a < 450; a++ {
     for b := 1; b < 450; b++ {
