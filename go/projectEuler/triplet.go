@@ -20,7 +20,9 @@ func abc() (p int) {
       b = j * j
       for k := 0; k < 1000; k++ {
         c = k * k;
-        if a + b + c == 1000 {
+        if (a * a) + (b * b) + (c * c) == 1000 {
+
+          fmt.Println(a, b, c)
           p = a * b * c
           return p
         } 
