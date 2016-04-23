@@ -4,32 +4,33 @@
 
 package main
 
-import(
-  "fmt"
+import (
+	"fmt"
 )
 
 func primesBelowTwoMillion() int {
-  var s int = 0
-  for i := 2; i < 2000000; i++ {
-    if isPrime(i) {
-      s += i
-    }
-  }
-  return s
+	var s int = 0
+	for i := 2; i < 2000000; i++ {
+		if isPrime(i) {
+			fmt.Println(i)
+			s += i
+		}
+	}
+	return s
 }
 
 func isPrime(n int) bool {
-  var d int = 2
-  for n > d {
-    if n % d == 0 {
-      return false
-    } else {
-      d++
-    }
-  }
-  return true
+	var d int = 2
+	for n > d {
+		if n%d == 0 {
+			return false
+		} else {
+			d++
+		}
+	}
+	return true
 }
 
 func main() {
-  fmt.Println(primesBelowTwoMillion())
+	fmt.Println(primesBelowTwoMillion())
 }
