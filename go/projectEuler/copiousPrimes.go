@@ -10,7 +10,7 @@ import(
 
 func primesBelowTwoMillion() int {
   var s int = 0
-  for i := 0; i < 2000000; i++ {
+  for i := 2; i < 2000000; i++ {
     if isPrime(i) {
       s += i
     }
