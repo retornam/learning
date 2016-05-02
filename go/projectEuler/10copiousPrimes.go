@@ -9,7 +9,7 @@ import (
 )
 
 func primesBelowTwoMillion() int {
-	var s int = 0
+	var s int
 	for i := 2; i < 2000000; i++ {
 		if isPrime(i) {
 			s += i
@@ -19,13 +19,12 @@ func primesBelowTwoMillion() int {
 }
 
 func isPrime(n int) bool {
-	var d int = 2
+	var d = 2
 	for n > d {
 		if n%d == 0 {
 			return false
-		} else {
-			d++
 		}
+		d++
 	}
 	return true
 }
