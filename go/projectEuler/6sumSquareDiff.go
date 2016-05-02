@@ -11,32 +11,32 @@
 package main
 
 import (
-  "fmt"
+	"fmt"
 )
 
 func sumSqu() int {
-  // s is for sum
-  var s int = 0
-  for i:= 0; i <= 100; i++ {
-    s += i * i
-  }
-  return s
+	// s is for sum
+	var s int
+	for i := 0; i <= 100; i++ {
+		s += i * i
+	}
+	return s
 }
 
 func squSum() int {
-  // s == sum
-  var s int = 0
-  for i := 0; i <= 100; i++ {
-    s += i
-  }
-  s = s * s
-  return s
+	// s == sum
+	var s int
+	for i := 0; i <= 100; i++ {
+		s += i
+	}
+	s = s * s
+	return s
 }
 
 func sumSquDiff() int {
-  return squSum() - sumSqu()
+	return squSum() - sumSqu()
 }
 
 func main() {
-  fmt.Println(sumSquDiff())
+	fmt.Println(sumSquDiff())
 }

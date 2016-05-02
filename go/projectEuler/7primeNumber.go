@@ -4,37 +4,36 @@
 
 package main
 
-import(
-  "fmt"
+import (
+	"fmt"
 )
 
 func prime() int {
-  // p is for prime number
-  // s is for sum, to keep track of how many prime numbers there has been
-  var p int = 1
-  var s int = 0
-  for s < 10001 {
-    p++
-    if isPrime(p) {
-      s++
-    }
-  }
-  return p
+	// p is for prime number
+	// s is for sum, to keep track of how many prime numbers there has been
+	var p = 1
+	var s = 0
+	for s < 10001 {
+		p++
+		if isPrime(p) {
+			s++
+		}
+	}
+	return p
 }
 
 func isPrime(n int) bool {
-  // d is for divisible
-  var d int = 2
-  for n > d {
-    if n % d == 0 {
-      return false 
-    } else {
-      d++
-    }
-  }
-  return true
+	// d is for divisible
+	var d = 2
+	for n > d {
+		if n%d == 0 {
+			return false
+		}
+		d++
+	}
+	return true
 }
 
 func main() {
-  fmt.Println(prime())
+	fmt.Println(prime())
 }

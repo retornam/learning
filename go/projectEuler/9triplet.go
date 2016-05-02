@@ -9,26 +9,26 @@
 package main
 
 import (
-  "fmt"
+	"fmt"
 )
 
 func abc() (p int) {
-  // s stands for sum
-  // p for product
-  var s int = 1000
-  for a := 1; a < 450; a++ {
-    for b := 1; b < 450; b++ {
-      for c := 1; c < 450; c++ {
-        if a * a + b * b == c * c && a + b + c == s {
-          p = a * b * c
-          return p
-        } 
-      }
-    }
-  }
-  return p
+	// s stands for sum
+	// p for product
+	var s = 1000
+	for a := 1; a < 450; a++ {
+		for b := 1; b < 450; b++ {
+			for c := 1; c < 450; c++ {
+				if a*a+b*b == c*c && a+b+c == s {
+					p = a * b * c
+					return p
+				}
+			}
+		}
+	}
+	return p
 }
 
 func main() {
-  fmt.Println(abc())
+	fmt.Println(abc())
 }

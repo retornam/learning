@@ -10,8 +10,8 @@ import (
 )
 
 func largestPrime() int {
-	var n int = 600851475143
-	var i int = 0
+	var n = 600851475143
+	var i int
 
 	for i := int(math.Sqrt(float64(n))); i >= i; i-- {
 		if n%i == 0 && isPrime(i) {
