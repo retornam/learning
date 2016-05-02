@@ -16,7 +16,6 @@ func largestPrime() int {
 	for i := int(math.Sqrt(float64(n))); i >= i; i-- {
 		if n%i == 0 && isPrime(i) {
 			return i
-			break
 		}
 	}
 	return i
