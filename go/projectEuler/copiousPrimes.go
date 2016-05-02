@@ -12,7 +12,6 @@ func primesBelowTwoMillion() int {
 	var s int = 0
 	for i := 2; i < 2000000; i++ {
 		if isPrime(i) {
-			fmt.Println(i)
 			s += i
 		}
 	}
