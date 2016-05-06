@@ -8,9 +8,9 @@ import (
 	"fmt"
 )
 
-func primesBelowTwoMillion() int {
+func primesBelowN(n int) int {
 	var s int
-	for i := 2; i < 2000000; i++ {
+	for i := 2; i < n; i++ {
 		if isPrime(i) {
 			s += i
 		}
@@ -30,5 +30,5 @@ func isPrime(n int) bool {
 }
 
 func main() {
-	fmt.Println(primesBelowTwoMillion())
+	fmt.Println(primesBelowN(2000000))
 }

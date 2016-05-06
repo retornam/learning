@@ -10,10 +10,10 @@ import (
 	"fmt"
 )
 
-func fib() (s int) {
+func fib(n int) (s int) {
 	// s is the sum of the even-valued terms
 	s = 0
-	for first, second := 0, 1; first < 4000000; first, second = second, first+second {
+	for first, second := 0, 1; first < n; first, second = second, first+second {
 		if first%2 == 0 {
 			s += first
 		}
@@ -22,5 +22,5 @@ func fib() (s int) {
 }
 
 func main() {
-	fmt.Println(fib())
+	fmt.Println(fib(4000000))
 }

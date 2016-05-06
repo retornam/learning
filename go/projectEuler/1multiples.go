@@ -5,19 +5,19 @@
 package main
 
 import (
-  "fmt"
+	"fmt"
 )
 
-func multiples() (s int) {
-  for i := 0; i < 1000; i++ {
-    if i % 3 == 0 || i % 5 == 0 {
-      // s is the sum of the multiples
-      s += i
-    }
-  }
-  return s
+func multiples(n int) (s int) {
+	for i := 0; i < n; i++ {
+		if i%3 == 0 || i%5 == 0 {
+			// s is the sum of the multiples
+			s += i
+		}
+	}
+	return s
 }
 
 func main() {
-  fmt.Println(multiples())
+	fmt.Println(multiples(1000))
 }

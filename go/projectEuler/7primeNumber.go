@@ -8,12 +8,12 @@ import (
 	"fmt"
 )
 
-func prime() int {
+func prime(int n) int {
 	// p is for prime number
 	// s is for sum, to keep track of how many prime numbers there has been
 	var p = 1
 	var s = 0
-	for s < 10001 {
+	for s < n {
 		p++
 		if isPrime(p) {
 			s++
@@ -35,5 +35,5 @@ func isPrime(n int) bool {
 }
 
 func main() {
-	fmt.Println(prime())
+	fmt.Println(prime(1001))
 }
