@@ -9,8 +9,8 @@ import (
 )
 
 func primesBelowN(n int) int {
-	var s int
-	for i := 2; i < n; i++ {
+	var s int = 2
+	for i := 3; i < n; i += 2 {
 		if isPrime(i) {
 			s += i
 		}
@@ -30,5 +30,5 @@ func isPrime(n int) bool {
 }
 
 func main() {
-	fmt.Println(primesBelowN(2000000))
+	fmt.Println(primesBelowN(200))
 }
